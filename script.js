@@ -14,3 +14,9 @@
 // Variable to store the list of guesses 
 
 // Variable for store the correct random number 
+
+// Waits for the html file to load and then allows us to execute any functions that we want
+window.onload = function () {
+  document.getElementById("number-submit").addEventListener("click", playGame);
+  document.getElementById("restart-gmae").addEventListener("click", initGame);
+}
