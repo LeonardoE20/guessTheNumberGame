@@ -1,7 +1,7 @@
 /**
  * Guess The Number Game
  * Done: Get user value from input and save it to variable numberGuess
- * TODO: Generate a random number 1 to 100 and save it to variable correctNumber
+ * Done: Generate a random number 1 to 100 and save it to variable correctNumber
  * TODO: Console whether the guess is too high, too low, or is correct inside playGame function
  * TODO: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
@@ -13,12 +13,13 @@
 
 // Variable to store the list of guesses 
 
-// Variable for store the correct random number 
+// Variable for store the correct random number, making this global so we can use this anywhere we want if we want to use it again.
+let correctNumber = getRandomNumber();
 
 // Waits for the html file to load and then allows us to execute any functions that we want
 window.onload = function () {
   document.getElementById("number-submit").addEventListener("click", playGame);
-  document.getElementById("restart-gmae").addEventListener("click", initGame);
+  document.getElementById("restart-game").addEventListener("click", initGame);
 }
 
 /*
@@ -28,4 +29,14 @@ This gets the user value from input(in HTML, it is an element) and save it to va
 function playGame() {
   let numberGuess = document.getElementById("number-guess").value; // .value attribute allows us get the value of the input
   console.log(numberGuess);
+}
+
+// This generates a random number 1 to 100 and save it to variable coorectNumber.
+function getRandomNumber() {
+  // Math.random returns a number between 0 and 1,
+  // and that's why we multiply it by 100
+  // let randomNumber = Math.random();
+  // let wholeNumber = Math.floor(randomNumber * 100) + 1;
+  // return wholeNumber;
+  return Math.floor((Math.random() * 100) + 1); // This is a shorter way of writing the code.
 }
