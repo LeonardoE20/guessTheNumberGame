@@ -12,7 +12,7 @@
  */
 
 // Variable to store the list of guesses 
-let guessed = [];
+let guesses = [];
 // Variable for store the correct random number, making this global so we can use this anywhere we want if we want to use it again.
 let correctNumber = getRandomNumber();
 
@@ -65,6 +65,14 @@ function getRandomNumber() {
 function saveGuessHistory(guess) {
   // *CODE GOES BELOW HERE *
   guesses.push(guess);
+}
+
+function displayHistory() {
+  let index; // TODO
+  let list = "<ul class='list-group'>";
+  // *CODE GOES BELOW HERE *
+  list += '</ul>'
+  document.getElementById("history").innerHTML = list;
 }
 
 /**
