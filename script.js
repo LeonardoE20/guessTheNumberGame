@@ -55,3 +55,39 @@ function getRandomNumber() {
   // return wholeNumber;
   return Math.floor((Math.random() * 100) + 1); // This is a shorter way of writing the code.
 }
+
+function showYouWon() {
+  const text = "Awesome job, you got it!"
+  /**
+   * Retrieve the dialog using the getDialog() function
+   * and save it to variable called dialog
+   * HINT: Use the 'won' and text parameters 
+   */
+  // *CODE GOES BELOW HERE *
+
+  document.getElementById("result").innerHTML = dialog;
+}
+
+function showNumberAbove() {
+  const text = "Your guess is too high!"
+  /**
+   * Retrieve the dialog using the getDialog() function
+   * and save it to variable called dialog
+   * HINT: Use the 'warning' and text parameters 
+   */
+  // *CODE GOES BELOW HERE *
+
+  document.getElementById("result").innerHTML = dialog;
+}
+
+function showNumberBelow() {
+  const text = "Your guess is too low!"
+  /**
+   * Retrieve the dialog using the getDialog() function
+   * and save it to variable called dialog
+   * HINT: Use the 'warning' and text parameters 
+   */
+  // *CODE GOES BELOW HERE *
+
+  document.getElementById("result").innerHTML = dialog;
+}
