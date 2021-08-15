@@ -48,6 +48,29 @@ function displayResult(numberGuess) {
   }
 }
 
+/**
+ * Initialize a new game by resetting all values and content on the page
+ * HINT: reset the correctNumber, guesses, and HTML content
+ */
+function initGame() {
+  // *CODE GOES BELOW HERE *
+  // Reset the correctNumber
+  // Reset the result display
+  // Reset the guesses array
+  // Resetthe guess history display
+  correctNumber = getRandomNumber();
+  document.getElementById("result").innerHTML = ""
+  guesses = [];
+  displayHistory();
+}
+
+/**
+ * Reset the HTML content for guess history
+ */
+function resetResultContent() {
+  document.getElementById("result").innerHTML = "";
+}
+
 // This generates a random number 1 to 100 and save it to variable coorectNumber.
 function getRandomNumber() {
   // Math.random returns a number between 0 and 1,
