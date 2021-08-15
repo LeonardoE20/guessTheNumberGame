@@ -69,9 +69,14 @@ function saveGuessHistory(guess) {
 }
 
 function displayHistory() {
-  let index; // TODO
+  let index = 0; // TODO
   let list = "<ul class='list-group'>";
   // *CODE GOES BELOW HERE *
+  while (index < guesses.length) {
+    list += "<li class='list-group-item'>" +
+      "You guessed " + guesses[index] + "</li>";
+    index += 1;
+  }
   list += '</ul>'
   document.getElementById("history").innerHTML = list;
 }
