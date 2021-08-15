@@ -56,6 +56,24 @@ function getRandomNumber() {
   return Math.floor((Math.random() * 100) + 1); // This is a shorter way of writing the code.
 }
 
+/**
+ * Retrieve the dialog based on if the guess is wrong or correct 
+ */
+function getDialog(dialogType, text) {
+  let dialog;
+  switch (dialogType) {
+    case "warning":
+      dialog = "<div class='alert alert-warning' role='alert'>"
+      break;
+    case "won":
+      dialog = "<div class='alert alert-success' role='alert'>"
+      break;
+  }
+  dialog += text;
+  dialog += "</div>"
+  return dialog;
+}
+
 function showYouWon() {
   const text = "Awesome job, you got it!"
   /**
@@ -64,7 +82,7 @@ function showYouWon() {
    * HINT: Use the 'won' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog('won', text);
   document.getElementById("result").innerHTML = dialog;
 }
 
