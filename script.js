@@ -30,6 +30,7 @@ function playGame() {
   let numberGuess = document.getElementById("number-guess").value; // .value attribute allows us get the value of the input
   displayResult(numberGuess);
   saveGuessHistory(numberGuess);
+  displayHistory();
 }
 
 /**
