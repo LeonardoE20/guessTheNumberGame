@@ -62,6 +62,7 @@ function initGame() {
   document.getElementById("result").innerHTML = ""
   guesses = [];
   displayHistory();
+  resetResultContent();
 }
 
 /**
@@ -92,10 +93,10 @@ function saveGuessHistory(guess) {
 }
 
 function displayHistory() {
-  let index = guesses.length; // TODO
+  let index = guesses.length - 1; // TODO
   let list = "<ul class='list-group'>";
   // *CODE GOES BELOW HERE *
-  while (index > 0) {
+  while (index >= 0) {
     list += "<li class='list-group-item'>" +
       "You guessed " + guesses[index] + "</li>";
     index -= 1;
