@@ -2,7 +2,7 @@
  * Guess The Number Game
  * Done: Get user value from input and save it to variable numberGuess
  * Done: Generate a random number 1 to 100 and save it to variable correctNumber
- * TODO: Console whether the guess is too high, too low, or is correct inside playGame function
+ * Done: Console whether the guess is too high, too low, or is correct inside playGame function
  * TODO: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
  * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
@@ -28,7 +28,13 @@ This gets the user value from input(in HTML, it is an element) and save it to va
 */
 function playGame() {
   let numberGuess = document.getElementById("number-guess").value; // .value attribute allows us get the value of the input
-  console.log(numberGuess);
+  if (numberGuess > correctNumber) {
+    console.log("too high");
+  } else if (numberGuess < correctNumber) {
+    console.log("too low");
+  } else {
+    console.log("is correct");
+  }
 }
 
 // This generates a random number 1 to 100 and save it to variable coorectNumber.
