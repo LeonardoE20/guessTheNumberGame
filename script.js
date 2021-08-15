@@ -5,7 +5,7 @@
  * Done: Console whether the guess is too high, too low, or is correct inside playGame function
  * Done: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * Done: Complete the showYouWon, showNumberAbove, showNumberBelow
- * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
+ * Done: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
@@ -54,6 +54,15 @@ function getRandomNumber() {
   // let wholeNumber = Math.floor(randomNumber * 100) + 1;
   // return wholeNumber;
   return Math.floor((Math.random() * 100) + 1); // This is a shorter way of writing the code.
+}
+
+/**
+ * Save guess history 
+ * HINT: Search Google "append to array in javascript"
+ * HINT: Use the guesses variable
+ */
+function saveGuessHistory(guess) {
+  // *CODE GOES BELOW HERE *
 }
 
 /**
