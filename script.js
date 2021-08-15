@@ -106,6 +106,6 @@ function showNumberBelow() {
    * HINT: Use the 'warning' and text parameters 
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog('warning', text);
   document.getElementById("result").innerHTML = dialog;
 }
