@@ -7,7 +7,7 @@
  * Done: Complete the showYouWon, showNumberAbove, showNumberBelow
  * Done: Use the showYouWon... functions within displayResult to display the correct dialog
  * Done: Save the guess history in a variable called guess
- * TODO: Display the guess history using displayHistory() function
+ * Done: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
  */
 
@@ -69,13 +69,13 @@ function saveGuessHistory(guess) {
 }
 
 function displayHistory() {
-  let index = 0; // TODO
+  let index = guesses.length; // TODO
   let list = "<ul class='list-group'>";
   // *CODE GOES BELOW HERE *
-  while (index < guesses.length) {
+  while (index > 0) {
     list += "<li class='list-group-item'>" +
       "You guessed " + guesses[index] + "</li>";
-    index += 1;
+    index -= 1;
   }
   list += '</ul>'
   document.getElementById("history").innerHTML = list;
